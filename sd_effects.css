@@ -14,6 +14,10 @@
 */
 
 /* HTML Styles */
+
+/*I specified that the background image that is fixed which means that the background image is in regard to the viewport or scrolls along with the containing block. 
+The background size is pretty self explanitory and effects the images size on the page, while all these directly effect the html element since I specififed that as well.*/
+
 html {
     background: url(sd_back1.png) fixed; 
     background-size: 100%;
@@ -21,20 +25,44 @@ html {
 
 
 /* Body Styles */
+
+/*The first body rule that I applied here is another background image but this time I make sure to add color gradients.
+The specific color gradient I use is called a radial gradient which starts from a central point then proceeds outwards
+in an ellipse or circle. Next I add a backgrouind color to that background image, this will just make it flow more with
+the page. Lastly I add a box shadow, a box shadow is just a slight shadow that makes it pop. The syntax of a box shaodw 
+first goes the color which mine was black, then I have to put the two offsets and the blur. The second box shadow in that
+line of code is for the opposite side.*/ 
+
 body {
-    background: url(sd_back2.png), radial-gradient(circle closest-corner at 40% 70%, white 15%, rgba(151, 151, 151, 0.5) 50%), radial-gradient(circle closest-corner at 80% 40%,white 15%, rgba(0,0,0,0) 30%), radial-gradient(closest-side at 10% 20%, white 15%, rgba(0, 0, 0, 0) 45%), radial-gradient(5% 5% at 90% 10%, white 15%, rgba(0, 0, 0, 0)40%);
+    background: url(sd_back2.png), radial-gradient(circle closest-corner at 40% 70%, 
+    white 15%, rgba(151, 151, 151, 0.5) 50%), radial-gradient(circle closest-corner at 80% 40%,
+    white 15%, rgba(0,0,0,0) 30%), radial-gradient(closest-side at 10% 20%, white 15%, 
+    rgba(0, 0, 0, 0) 45%), radial-gradient(5% 5% at 90% 10%, white 15%, rgba(0, 0, 0, 0)40%);
     background-color: rgb(151, 151, 151);
     box-shadow: rgb(31, 31, 31) 30px 0px 45px, rgb(31, 31, 31) -30px 0px 45px;
-} 
+}  
 
 
 /* Navigation List Styles */
+
+/*For the navigation list styles it was pretty simple all I had to do was effect the article who is a child of the header
+which is a child of the body. I added the element border to effect the border of the article and have an offset of 5 pixels
+which just adds a color to the border that is slighty raised.*/
+
 body > header a {
     border: outset 5px rgb(211, 211, 255); 
 }
 
 
 /* Section Left Styles */
+
+/*In the first element of this section I needed to effect header one only in the left section, I needed to add a text decortaion of 
+color then I just added some text shadow which made the text pop out more.
+For the second I needed to effect the image at the botom of the page, first I used the rule webkit filter which helps render before
+It's displayed. Then I needed to add a drop shadow and tis adds a small but clear shadow around the image making it look like its
+jumping out of the page. I also did this again to have the shadow gor onto the other side and as well as tranforming it 180 degrees
+to have the shadow be all the way around the image.*/
+
 section#left h1 {
     text-decoration-color: rgb(211, 211, 255);
     text-shadow: black 0px 0px 5px;
@@ -43,11 +71,15 @@ section#left h1 {
 #mportrait {
     -webkit-filter: drop-shadow(-15px 0px 5px rgba(51, 51, 51, 0.9)) grayscale(0.7) opacity(0.6);
     filter: drop-shadow(-15px 0px 5px rgba(51, 51, 51, 0.9)) grayscale(0.7) opacity(0.6);
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); 
 }
 
 
 /* Footer Styles */
+
+/*For the footer it was farley easy and I just added a border to the top of the footer which was 2 pixels and had it just be a
+solid color.*/ 
+
 footer {
     border-top: 2px solid rgb(171, 171, 171);
 }
